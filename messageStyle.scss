@@ -1,0 +1,156 @@
+.Message {
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-height: 50px;
+  border: 1px solid;
+  border-radius: 4px;
+  animation: topMove 0.38s linear forwards;
+  @keyframes topMove {
+    0% {
+      transform: translate3d(0, -75px, 0);
+      opacity: 0.16;
+    }
+    50% {
+      opacity: 0.68;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  @keyframes bottomMove {
+    0% {
+      transform: translate3d(0, 75px, 0);
+      opacity: 0.16;
+    }
+    50% {
+      opacity: 0.68;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  @keyframes leftMove {
+    0% {
+      transform: translate3d(-75px, 0, 0);
+      opacity: 0.16;
+    }
+    50% {
+      opacity: 0.68;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  @keyframes rightMove {
+    0% {
+      transform: translate3d(75px, 0, 0);
+      opacity: 0.16;
+    }
+    50% {
+      opacity: 0.68;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+.Messagetop {
+  left: 50%;
+  margin-left: -200px;
+  top: 30px;
+}
+
+.MessagetopLeft {
+  left: 30px;
+  top: 30px;
+}
+
+.MessagetopRight {
+  right: 30px;
+  top: 30px;
+}
+
+.Messagebottom {
+  left: 50%;
+  margin-left: -200px;
+  bottom: 30px;
+}
+.MessagebottomLeft {
+  left: 30px;
+  bottom: 30px;
+}
+.MessagebottomRight {
+  right: 30px;
+  bottom: 30px;
+}
+.Messagecenter {
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -25px;
+}
+.MessagetipsIcon {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  border-radius: 50%;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+.Messageprimary {
+  background-color: #0099cb;
+}
+.Messageerror {
+  background-color: #f56c6c;
+}
+.Messageinfo {
+  background-color: #909399;
+}
+.Messagesuccess {
+  background-color: #67c23a;
+}
+.Messagewarning {
+  background-color: #e6a23c;
+}
+.Messagechecked {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.Messagechecked:before,
+.Messagechecked:after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  color: white;
+  border: 1px solid;
+  background-color: white;
+}
+.Messagechecked:before {
+  width: 1px;
+  height: 1px;
+  left: 25%;
+  top: 50%;
+  transform: skew(0deg, 50deg);
+}
+.Messagechecked:after {
+  width: 5px;
+  height: 1px;
+  left: 45%;
+  top: 42%;
+  transform: skew(0deg, -50deg);
+}
